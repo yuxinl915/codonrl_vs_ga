@@ -1,0 +1,51 @@
+name: codonrl
+channels:
+  - pytorch
+  - nvidia
+  - bioconda
+  - conda-forge
+  - defaults
+
+dependencies:
+  # Python and core
+  - python=3.10
+  - pip
+  
+  # CUDA 12.1 for H100 support
+  - cuda-toolkit=12.1
+  
+  # PyTorch with CUDA 12.1
+  - pytorch=2.5.1
+  - pytorch-cuda=12.1
+  - torchvision
+  - torchaudio
+  
+  # Scientific computing
+  - numpy=1.26.*
+  - scipy
+
+  # visual
+  - matplotlib
+  
+  # Bioinformatics tools - ViennaRNA from conda
+  - viennarna=2.6.*  # From bioconda channel
+  
+  # Development tools
+  - ipykernel
+  - jupyter
+  
+  - pip:
+      # Flash Attention for H100 
+      # - flash-attn==2.6.3
+      
+      # LinearFold for structure prediction
+      - linearfold-unofficial==0.1
+      
+      # Triton for kernel compilation (important for H100)
+      - triton>=3.0.0
+      
+      # Logging and monitoring
+      - wandb
+      
+      # Additional dependencies if needed
+      - einops  # For tensor operations

@@ -1,0 +1,22 @@
+# External large inputs kept out of the repo
+checkpoints/
+results_ga_deap_v2_55_a_cai_1.0/
+results_ga_deap_v2_55_a_cai_2.5/
+
+# Archives and OS noise
+*.zip
+.DS_Store
+
+# Python cache/build noise
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Local temp/runtime files
+codex_work/tmp/
+nohup.out
+
+# Common local envs
+.venv/
+venv/
